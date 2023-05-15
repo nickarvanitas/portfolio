@@ -5,9 +5,9 @@ import { OrthographicCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import HeroExperienceObject from './HeroExperienceObject'
 
-export default function HeroExperience() {
+export default function HeroExperience({ className }: { className?: string }) {
   return (
-    <Canvas shadows className='border-zinc-600 border-l-2 bg-zinc-900'>
+    <Canvas shadows className={`border-zinc-600 border-l-2 bg-zinc-900 ${className}`}>
       <OrthographicCamera makeDefault position={[0, 2, 100]} zoom={60} />
       <ambientLight intensity={1} />
       <HeroExperienceObject />
