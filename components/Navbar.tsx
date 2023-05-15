@@ -1,13 +1,11 @@
 "use client"
 
 import { faBars, faChevronDown, faClose } from '@fortawesome/pro-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Fragment } from 'react'
 import { mainMenu } from '@/data/mainMenu'
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { usePathname } from 'next/navigation'
 import ModeToggle from './ModeToggle'
 
@@ -44,7 +42,7 @@ export default function Navbar() {
                               <Menu.Button className={cn(
                                 isActive ? 'text-gray-800' : 'text-gray-500 hover:text-gray-800',
                                 'px-3 py-2 flex gap-x-1 items-center text-sm  dark:text-gray-300 dark:hover:text-gray-50 transition-default'
-                              )}>{item.name}<FontAwesomeIcon icon={faChevronDown} className='w-[10px] h-auto' /></Menu.Button>
+                              )}>{item.name}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 429.3l22.6-22.6 192-192L493.3 192 448 146.7l-22.6 22.6L256 338.7 86.6 169.4 64 146.7 18.7 192l22.6 22.6 192 192L256 429.3z" /></svg></Menu.Button>
                               <Transition
                                 as={Fragment}
                                 enter="transition ease-out duration-100"
@@ -96,7 +94,7 @@ export default function Navbar() {
                                 target='_blank'
                                 className='text-gray-800 dark:text-gray-100'
                               >
-                                <FontAwesomeIcon icon={item.icon as IconProp} size='2xl' />
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg>
                               </a>
                             </div>
                           )
@@ -111,9 +109,9 @@ export default function Navbar() {
               <div className="flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   {open ? (
-                    <FontAwesomeIcon className='w-6 h-6 bg-gray-700' icon={faClose} />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M326.6 166.6L349.3 144 304 98.7l-22.6 22.6L192 210.7l-89.4-89.4L80 98.7 34.7 144l22.6 22.6L146.7 256 57.4 345.4 34.7 368 80 413.3l22.6-22.6L192 301.3l89.4 89.4L304 413.3 349.3 368l-22.6-22.6L237.3 256l89.4-89.4z" /></svg>
                   ) : (
-                    <FontAwesomeIcon className='w-6 h-6 bg-gray-700' icon={faBars} />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 64H448v64H0V64zM0 224H448v64H0V224zM448 384v64H0V384H448z" /></svg>
                   )}
                 </Disclosure.Button>
               </div>

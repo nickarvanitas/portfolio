@@ -1,5 +1,3 @@
-import { faArrowUpRight } from '@fortawesome/pro-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
 
@@ -13,11 +11,11 @@ export default function ContactSection() {
         </div>
         <div className='grid grid-cols-2 border-t-2 border-b-2 border-zinc-500 [&>*]:border-r-2 [&>*]:border-zinc-500 last:[&>*]:border-r-0'>
           <Link className='col-span-1 text-right p-5 text-white' href='/resume'>
-            Contact Me<FontAwesomeIcon icon={faArrowUpRight} color='#fff' />
+            Contact Me<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 96h32v32V352v32H288V352 205.3L86.6 406.6 64 429.3 18.7 384l22.6-22.6L242.7 160H96 64V96H96 320z" /></svg>
           </Link>
           <Link className='col-span-1 p-5 text-white' href='/contact'>
             View Resume
-            <FontAwesomeIcon icon={faArrowUpRight} color='#fff' />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 96h32v32V352v32H288V352 205.3L86.6 406.6 64 429.3 18.7 384l22.6-22.6L242.7 160H96 64V96H96 320z" /></svg>
           </Link>
         </div>
       </div>

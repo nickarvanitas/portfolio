@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 import CrosshairCursor from '@/components/CrosshairCursor'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSlashForward } from '@fortawesome/pro-solid-svg-icons'
 import HeroExperience from './HeroExperience'
 
 
@@ -29,7 +27,7 @@ export default function Hero() {
         <div className='flex  scrollbar-hide scroll- w-[100vw] scroll space-x-2 bg-zinc-900 py-2 border-t-2 border-b-2 border-zinc-600'>
           <div className='flex gap-x-12 pl-12 animate-cycleList'>
             {xpDup.map((item, index) => (
-              <div key={index} className='text-white flex items-center gap-x-12 flex-nowrap text-2xl font-light'><span className='w-max'>{item}</span><FontAwesomeIcon icon={faSlashForward} color='#D9354A' /></div>
+              <div key={index} className='text-white flex items-center gap-x-12 flex-nowrap text-2xl font-light'><span className='w-max'>{item}</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M319.9 0H248.8L.1 512H71.2L319.9 0z" /></svg></div>
             ))}
           </div>
         </div>
