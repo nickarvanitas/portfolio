@@ -80,7 +80,7 @@ export default function Projects() {
 
   return (
     <div ref={containerRef}>
-      <div className="scroll-container sticky inset-0 will-change-transform bg-zinc-900 border-b-2 border-zinc-500">
+      <div className="scroll-container sticky inset-0 will-change-transform bg-zinc-900 border-b-2 border-zinc-500 z-[5]">
         <div className='flex h-[15vh]  items-center pl-40 space-x-20'>
           <div className='text-zinc-300 w-[40vw] max-w-lg'>
             <div>Case Studies</div>
@@ -96,9 +96,10 @@ export default function Projects() {
           style={{ x: transform }}
           className="relative h-[calc(85vh+4px)] w-max flex items-center px-40 "
         >
-          <div className="relative flex space-x-20">
+          <div className="relative flex gap-x-20">
             {projects.map((project, i) => (
-              <a href={project.href} className="w-[40vw] max-w-lg aspect-square group border-zinc-500 border-2 relative overflow-hidden px-7 py-9 bg-black" key={project.href}>
+              <a href={project.href} className="w-[40vw] aspect-square group border-zinc-500 border-2 relative overflow-hidden px-7 py-9 bg-black" key={project.href}>
+
                 <div className='flex flex-col '>
                   <div className='!leading-tighter lg:text-7xl text-6xl text-white font-bold  pb-4'>{project.title}</div>
                   <div className='text-xl text-zinc-400 font-light lg:text-2xl'>{project.subtitle}</div>

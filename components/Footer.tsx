@@ -1,4 +1,4 @@
-export default function Footer({ children }): React.ReactNode {
+export default function Footer(): React.ReactNode {
   return (
     <footer className="bg-zinc-950">
       <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">

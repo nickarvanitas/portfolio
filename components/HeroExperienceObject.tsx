@@ -25,7 +25,7 @@ export default function HeroExperienceObject(props) {
                 <capsuleGeometry args={[1, 2.6, 4, 24]} />
                 <meshBasicMaterial toneMapped={false} wireframe  >
                   <GradientTexture stops={[0, 1]}
-                    colors={['#E96C64', '#F18141']}
+                    colors={['#b91c1c', '#F18141']}
 
                   />
                 </meshBasicMaterial>
@@ -34,7 +34,7 @@ export default function HeroExperienceObject(props) {
                 <capsuleGeometry args={[1, 2.6, 4, 24]} />
                 <meshBasicMaterial toneMapped={false} wireframe  >
                   <GradientTexture stops={[0, 1]}
-                    colors={['#E96C64', '#F18141']}
+                    colors={['#b91c1c', '#F18141']}
                   />
                 </meshBasicMaterial>
               </mesh>
@@ -42,7 +42,7 @@ export default function HeroExperienceObject(props) {
                 <capsuleGeometry args={[1, 2.6, 4, 24]} />
                 <meshBasicMaterial toneMapped={false} wireframe  >
                   <GradientTexture stops={[0, 1]}
-                    colors={['#E96C64', '#F18141']}
+                    colors={['#b91c1c', '#F18141']}
                   />
                 </meshBasicMaterial>
               </mesh>
@@ -50,7 +50,7 @@ export default function HeroExperienceObject(props) {
                 <capsuleGeometry args={[1, 2.6, 4, 24]} />
                 <meshBasicMaterial toneMapped={false} wireframe   >
                   <GradientTexture stops={[0, 1]}
-                    colors={['#E96C64', '#F18141']}
+                    colors={['#b91c1c', '#F18141']}
                   />
                 </meshBasicMaterial>
               </mesh>
