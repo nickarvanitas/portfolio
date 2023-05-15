@@ -1,0 +1,131 @@
+# MTC Tools
+**TLDR: I was the first designer to work on the native version of our web app. This consisted of designing a mobile search, menu, profile experience, and dashboard.**
+
+
+
+## Background
+The Missionary Training Center (MTC) is a profressional training & coaching company based out of Provo Utah. I was on the technology team working on an internal app that serviced that different departments that worked there (Training, Travel, HR, etc.)
+
+### Problem
+The MTC was investing more resources into building a mobile platform for their internal app (MTC Tools). Previously, they had accomplished this with a Google Site, but were now building out a solution with Angular. They were debuting this new mobile site by rolling out a new profile experience for desktop and mobile.
+
+### Brief
+
+I was assigned to design a mobile & desktop profile experience in conjunction with designing foundational UI components such as search, navigation, and a dashboard. The list of items to design were the following...
+
+* [ ] Desktop Profile
+* [ ] Mobile Profile (3 versions for different employee types)
+* [ ] Mobile Search
+* [ ] Mobile NavBar
+* [ ] Dashboard
+
+### Team
+
+Myself — UX Designer<br />
+Karen White — Lead UX Designer
+
+
+
+## Discovery
+
+### Requirements
+
+- Unified design for Employees, Missionaries, Volunteers, Ecclesiastical, etc.
+- Account for the smallest screen resolution 1280px x 820px.
+- Represent data that has been previously represented in the previous profile designs.
+
+### Constraints
+
+The mobile app will be developed as a Progressive Web App (PWA) so native components will have to be recreated, and speed will be slower than a native app.
+
+
+
+## Research
+
+For the new profile experience, I focused my research around the components we had traditionally used to make sure they were being used effectively. 
+### Task Analysis
+
+![Button Test](/mtc/buttonTest.png "title")
+> Two flows were compared: Clicking button 2 vs. clicking the checkbox and then clicking button 1
+
+The most common component used within MTC Tools was our `<mtc-table>`. As I was planning on using this regularly within the profile I studied how users interacted with it.
+
+When given a task that would force users to select button 1 or 2 the results were...
+
+- All users clicked directly on the checkbox to activate ‘button 2’
+- 40% of users tried to access ‘button 1’ by clicking on the row they were hovering.
+- 40% of users clicked directly on ‘button 1’
+- 20% of users didn’t notice 'button 1'
+
+These results led me to consider 2 things: Applying a `max-width` on the `<mtc-table>` to make the button more obvious and applying a row click event to trigger the button.
+
+### Gap Analysis
+![Analysis](/mtc/analysis.png "title")
+> Comparing features & data across 3 previous profiles
+
+Another thing I had to do was look into inconsistencies across our current 3 different profile experiences.
+
+To accomplish this...
+
+- Labels, Functionality, & Navigation links were listed out
+- Items marked in red distuinguished discrepencies between the 3 versions
+- Functionality was added or removed as a result
+
+
+### Typography
+
+<div style={{fontFamily: 'Open Sans'}, {paddingTop: '16px'}}>
+  <div style={{fontWeight: 600, fontSize: '20px'}}>20px Semi-Bold</div>
+  <div style={{fontWeight: 400, fontSize: '18px'}}>18px Regular</div>
+  <div style={{fontWeight: 400, fontSize: '16px'}}>16px Regular</div>
+  <div style={{fontWeight: 600, fontSize: '14px'}}>14px Semi-Bold</div>
+  <div style={{fontWeight: 400, fontSize: '14px'}}>14px Regular</div>
+</div>
+### Whiteboarding
+![Whiteboard](/mtc/whiteboard.jpg "title")
+> Photo credit to Kaleidico on Unsplash
+
+Before jumping in, the Senior UX Designer and I met to go over the project. We discussed how we were going to meet project requirements, and worked through basic layout. By whiteboarding, we were able to talk through our ideas without committing too much time to them. 
+
+
+### Formatting Desktop
+
+![Summary](/mtc/mtc_hero.png "title")
+> A Summary Bar helped reduce the width of main content area. If I could redo this project, I would make the title less visually heavy and increase spacing throughout.
+
+Based on our research, we knew that some users weren't seeing buttons on our wide tables. We hoped to limit this with a `<summary-bar>` component that was placed along the left hand side.
+
+A card layout was chosen that can accommodate a 3 column or 2 column layout depending on the screen width to help with responsiveness.
+
+Wide margins are used on the left and right of the cards to help with page scrollability.
+
+### Solving for Multiple Roles
+![Summary](/mtc/mtc_employee.png "title")
+> An iOS native drawer component was replicated to help view employees with multiple roles.
+
+One feature we had to account for was solving for an employee with multiple roles. Each employee role 
+
+I tried to leverage the look of iOS native components for this feature to give the mobile version a natural feeling.
+
+### Creating a Dashboard
+![Summary](/mtc/mtc_home.png "title")
+> Trying to find a useful dashboard design for 1000+ profiles was difficult. 
+
+The original plan for the dashboard was to have a searchable directory. However, we soon found out that there would be 1000+ people, and the directory idea wouldn't be feasible / usefull. I proposed that instead we show smaller groupings based off individuals attributes. Although it introduced another step in the flow, it better chunked the data and was a much better option performance wise.
+
+### Finalizing the Profile
+![Summary](/mtc/mtc_profiles.png "title")
+> From left to right: Search, Profile, Notes, and Menu.
+
+I tried to follow iOS guidelines as best as I could to give it the most native feel. It was important that the designed components could easily be stacked on top of eachother while maintaining proper spacing. Additional components like the menu and search had to be designed out as well to round out the feel of the app.
+
+### Presenting to the Team
+Although no pictures are shown, at the end of this project I was able to meet with a team of designers, developers, and managers to present the project and our findings. From there tasks were split out and I took more of a backseat support role to make sure development met the designs.
+
+
+
+## Conclusion
+
+### Documenting Changes
+After everything was launched and finalized, I spent time to update our style guide with new components. Although I did it begrudgingly, **I've learned that an 'up to date' Style Guide allows designers to not be a bottle neck in flows**, and allows other team members to work independantly while not compromising design.
+

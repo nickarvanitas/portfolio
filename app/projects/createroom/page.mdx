@@ -1,0 +1,164 @@
+# Create Room
+**TLDR: Through focusing on the user flow, I was able to identify key customer pain points. I was then able to design, develop, and colloborate with team members to improve these areas.**
+
+## Background
+Create Room is a furniture company that specializes in crafting furniture and accessories. They sell millions of dollars worth of products across the US, Canada, and the UK. 
+
+### Problem
+My objective at Create Room was very simple: **Increase Sales**. Due to the nature of the small team, there wasn't a lot of room for colloboration. More often than not, I was left to my own devices, and found myself gravitating towards what I knew best: **Creating an exellent web experience**.
+
+### Brief
+
+To start, my plan of action was the following:
+
+* [ ] Map out User Flow
+* [ ] Dig into Analytics
+* [ ] Content Audit
+* [ ] Design Audit
+
+### Role
+UX Engineer in a Marketing Team
+
+***
+
+## Discovery
+
+### Digging into Analytics 
+I started looking at analytics with the goal of identifying areas of improvement. I wanted to know things such as what products were underperforming, where are people dropping off the site, and how are people interacting with the site. 
+> "Combine qualitative & quantitative research to create a complete picture of what people do (quantitative) and then why (qualitative)" -Leah Buley, UX Team of One
+### User Flow Charts
+![User Flow](/cr/user_flow.png "title")
+> 80% of the effects come from 20% of the causes - Pareto Principle
+
+Identifying the main user flow helped dial in my focus even more. I decided to focus on pain points that effected the majority, instead of 'edge cases' that only effected some of the users. This data also provoked a lot of questions I had such as
+- What's causing large drop offs on Homepage / Product Page / Cart Page?
+- Would it be better to not send users to the 'Detail' page?
+- Can we better funnel users from high traffic areas (such as blog) to the product page?
+- What information are users coming to our site with?
+- What goals do the users have at each of the steps?
+
+While some of these I could answer by looking at more graphs, to feel confident about my hypothesis I would have to reach out to individual users.
+
+### Content Auditing
+> To fix a problem you first have to understand what you are dealing with
+
+### Viewing Previous Designs
+
+Now that I knew what the main flow was, I had to familiarize myself with the respective pages. 
+
+
+I made note of any weird functionality such as
+* Homepage CTA links to detail page instead of product page
+* Homepage has steps listed out that are vague
+* Product Page doesn't look like traditional product page. Loading is very slow
+* Cart Page's Checkout button is very far down on the page
+
+#### Removing Clutter
+
+Create Room had never really had a dedicated web person before I joined the team. This caused all of their assets to be really bloated and I frequently saw things like
+
+``` js 
+product.template.json
+product2.template.json
+product3.template.json
+product4.template.json
+product5.template.json
+product_new.template.json
+product_final.template.json
+product_final_final.template.json
+```
+
+With no idea which one was current.
+
+I knew **if I wanted to accomplish things in a reasonable timeframe I'd first have to take time to simplify and reduce clutter.** When I was finished, the number of files shrank from 802 to around 500, and made the site more manageable
+
+### Site Recordings & Heat Maps
+
+Once I had my list of site features, I began to look at how (and if) users were interacting with them. **Heat Maps** gave me a general idea of what users were interacting with / not interacting with. While **Site Recordings** helped boost my confidence about any hypothesis I already had. I was able to generate the matrix below based off my findings
+
+
+|  | Homepage | Detail Page | Product Page | Cart Page |
+| --: | :- | :- | :- | :- |
+| **Goals** | Learn about product & navigate to product page | Learn about product & navigate to product page | See product variations, pricing, and add items to cart | Checkout
+| **Pain Points** | Confused by 'step' messaging | Frustrated with extra step that has similar content to homepage | Loading Slow, not scrolling page | Missing important information below fold 
+  
+
+### Building Out Requirement List
+
+Armed with the knowledge of where the customers were going, what they were doing, and what obstacles were in their way, I started creating a list of requirements that would be accomplished in the upcoming design.
+
+***
+
+## Design
+
+### Design Review
+
+With the requirements laid out for each page, I could begin working through the design phase! I've included some of the thoughts I was having while going through the pages.
+#### Homepage
+![Homepage Notes](/cr/homepage_notes.png "title")
+#### Cart
+![Cart Notes](/cr/cart_notes.png "title")
+
+### Developer Review
+
+Normally, before spending too much time on design I would try to meet with the development team to gauge their talent and what's possible within the given timeframe. **What's the purpose of designing something if it can't be implemented?** In this case, since I was both, I was able to have fun internal conversations with myself about what would and wouldn't work. 
+
+
+### Sketching & Wireframing
+
+To get a general idea of layout, wireframes were created. I didn't want to spend too much time on them though, since I could make final tweaks in development.
+
+
+### Mockups
+
+![Cart](/cr/cart_mockup.png "title")
+> Cart Page Mockup
+
+## Development
+
+### Managing the Unmangeable
+
+As I mentioned before, when I started at Create Room, their website hadn't had a dedicated person for over a year. The result of that was a tangled / unmangeable mess of code, that made it increasingly difficult to make any organized changes.
+
+What complicated this even more, is that **new features we're constatly being prioritized over optimizations**. If I wanted the development environment to get any better I had to be smart and efficient with my changes.
+
+### Removing Clutter
+
+There's few things I love more than being able to delete 100's of lines of unused code. Lucky for me, our site had thousands. At first I was very hesitant and careful, and took time to understand what each line of code was doing. But as this slowed down the process dramatically, I shifted into more of a *move fast and break things* mentality. I figured that anything that was broken in the process could always be fixed and made better later on.
+
+### Migrating to a supported Shopify theme
+One of the big projects I accomplished, was moving out development environment to a Shopify supported theme. Before we were using a 3rd party theme that hadn't been updated for years, and had been mangeled by a slew of different people working on the site. **Switching to a supported theme, meant that I was no longer the only one working on our website, since the site could now recieve constant updates from the main github branch.**
+
+### Adopting TailwindCSS
+> TailwindCSS helped me as a developer match external designs that differed from our design conventions
+
+What started as SCSS using BEM methodology, transitioned into a love for TailwindCSS. It helped me greater match external designs without spending hours writing media queries. 
+
+### Hosting Images Locally
+![dreambox](/cr/dreambox_old.png "Old dreambox Page")
+> Old Product Page had a large initial load time
+
+One of the worst things I saw at Create Room, was their hero product page which took 10+ seconds to load (on a fast computer). The previous developer had setup an external content management app with a database that was downloading ~90 images (for each of the product variantions) that weren't optimized for web. 
+
+Knowing that I could host images on Shopify (so we wouldn't have to connect to a 3rd party database), and after realizing I could reproduce the same functionality with metafields, I made the decision to move everyhing over. 
+
+I leveraged Photoshop scripts to automate re-exporting the images (which saved me loads of time and headache).
+
+## Finalizing the Design
+
+![dreambox](/cr/cart_new.jpg "cart")
+> New Cart Page
+***
+![dreambox](/cr/homepage_new.jpg "Homepage")
+> New Homepage
+***
+
+> New Detail Page
+***
+### Product Page
+
+
+## AB Testing
+
+![dreambox](/cr/graphs.png "graphs")
+Even though these pages launched, my work wasn't done. It's important to continually review and monitor changes to ensure they're having a positive impact. With a small team, we've ideated, designed, and launched a few AB tests to give this new cart page the best chance possible to succeed.
