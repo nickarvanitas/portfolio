@@ -4,6 +4,8 @@ import React, {
   useState,
   useLayoutEffect,
   useCallback,
+  useEffect,
+  use,
 } from "react";
 
 import ResizeObserver from "resize-observer-polyfill";
@@ -21,6 +23,14 @@ export default function Projects() {
   const ghostRef = useRef(null);
   const [scrollRange, setScrollRange] = useState(0);
   const [viewportW, setViewportW] = useState(0);
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      setIsSmall(true);
+    }
+  }, []);
+
 
   useLayoutEffect(() => {
     scrollRef && setScrollRange(scrollRef.current.scrollWidth);
@@ -79,25 +89,25 @@ export default function Projects() {
 
   return (
     <div ref={containerRef}>
-      <div className="scroll-container sticky inset-0 will-change-transform bg-zinc-900 border-b-2 border-zinc-500 z-[5]">
-        <div className='flex h-[15vh]  items-center xl:pl-40 lg:pl-30 pl-20 space-x-20'>
-          <div className='text-zinc-300 w-[40vw] max-w-lg'>
+      <div className="scroll-container sticky inset-0 will-change-transform bg-zinc-800 border-b-2 border-zinc-500 z-[5]">
+        <div className='flex h-[15vh]  items-center xl:pl-40 lg:pl-30 pl-20 space-x-20 bg-zinc-900 border-b-2 border-zinc-600'>
+          <div className='text-zinc-300 w-[40vw] max-w-lg text-xl border-r border-zinc-600'>
             <div>Case Studies</div>
             <div>01 –– 04</div>
           </div>
-          <div className='text-zinc-400 w-[40vw] max-w-lg'>
+          <div className='text-zinc-400 w-[40vw] max-w-lg text-xl'>
             <div>Some of the projects I’ve been a part of. Feel free to reach out to see more of my works.</div>
           </div>
         </div>
 
         <motion.section
           ref={scrollRef}
-          style={{ x: transform }}
+          style={isSmall ? { x: 0 } : { x: transform }}
           className="relative h-[calc(85vh+4px)] w-max flex items-center xl:px-40 lg:px-30 px-20"
         >
-          <div className="relative flex gap-x-20">
+          <div className="relative flex gap-x-20 lg:gap-x-40">
             {projects.map((project, i) => (
-              <a href={project.href} className="md:w-[80vw] lg:w-[40vw] 2xl:w-[30vw] aspect-[3/2] lg:aspect-square group border-zinc-500 border-2 relative overflow-hidden px-7 py-9 bg-black" key={project.href}>
+              <a href={project.href} className="md:w-[80vw] lg:w-[40vw] 2xl:w-[30vw] aspect-[3/2] lg:aspect-square group border-zinc-500 border-2 relative overflow-hidden px-7 py-9 bg-zinc-950 shadow-2xl" key={project.href}>
                 <div className='flex flex-col '>
                   <div className='!leading-tighter text-6xl lg:text-5xl xl:text-7xl text-white font-bold  pb-4'>{project.title}</div>
                   <div className=' text-zinc-400 font-light text-2xl md:text-xl lg:text-2xl'>{project.subtitle}</div>
@@ -113,7 +123,7 @@ export default function Projects() {
           </div>
         </motion.section>
       </div>
-      <div ref={ghostRef} style={{ height: scrollRange }} className="ghost w-screen" />
-    </div>
+      <div ref={ghostRef} style={isSmall ? { height: 0 } : { height: scrollRange }} className="ghost w-screen" />
+    </div >
   );
 };

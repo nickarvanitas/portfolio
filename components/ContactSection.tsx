@@ -5,9 +5,9 @@ export default function ContactSection() {
   return (
     <section className='bg-zinc-800 relative'>
       <div className="flex flex-col">
-        <div className='text-center py-8 md:py-4 lg:py-16'>
-          <div className='font-serif text-6xl text-white pb-4'>Questions? Don’t Hesitate to Reach Out</div>
-          <div className='font-light text-2xl text-gray-300'>I'll get back to you as soon as I can</div>
+        <div className='text-center py-8 md:py-4 lg:py-16 px-4'>
+          <div className='font-serif text-5xl lg:text-6xl text-white pb-4'>Questions? Don’t Hesitate to Reach Out</div>
+          <div className='font-light text-2xl lg:text-3xl text-gray-300'>I'll get back to you as soon as I can</div>
         </div>
         <div className='grid grid-cols-2 border-t-2 border-b-2 border-zinc-500 [&>*]:border-r-2 [&>*]:border-zinc-500 last:[&>*]:border-r-0'>
           <Link className='w-full group transition-default hover:bg-zinc-900 col-span-1 p-5 flex items-center gap-x-2 xl:gap-x-8 text-white text-lg lg:text-2xl justify-end' href='/contact'>

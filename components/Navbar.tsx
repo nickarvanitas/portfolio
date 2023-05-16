@@ -2,7 +2,7 @@
 
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
+import cn from 'clsx'
 import { Fragment } from 'react'
 import { mainMenu } from '@/data/mainMenu'
 import { usePathname } from 'next/navigation'
@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <Disclosure as="nav" className="dark:bg-zinc-800 z-20  top-0 border-b-2 border-solid border-zinc-600  dark:border-gray-700 relative">
+    <Disclosure as="nav" className="dark:bg-zinc-800 z-20  top-0 border-b-2 border-solid  dark:border-zinc-600 relative">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

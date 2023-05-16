@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/lib/utils";
+import cn from 'clsx'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from "next-themes";
 import { Fragment } from "react";

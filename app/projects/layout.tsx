@@ -15,9 +15,8 @@ export default function Layout({
 
   return (
     <>
-
       <HeroImage slug={slug} />
-      <motion.div className="prose-rose prose max-w-none mx-auto dark:prose-invert prose-h2:border-neutral-200/70 dark:bg-gray-800 prose-h2:border-b z-10 relative bg-white" style={{ y: y }} transition={{ type: "spring", stiffness: 100 }}>
+      <motion.div className="prose-rose prose max-w-none mx-auto prose-h2:border-zinc-200/70 prose-h2:border-b z-10 relative bg-white" style={{ y: y }} transition={{ type: "spring", stiffness: 100 }}>
         {children}
       </motion.div>
     </>

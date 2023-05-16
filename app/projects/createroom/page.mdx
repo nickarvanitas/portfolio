@@ -1,3 +1,9 @@
+
+import Article from '@/components/ui/article'
+import { Tab, Tabs } from '@/components/ui/tabs'
+import Callout from '@/components/ui/Callout'
+
+
 # Create Room
 **TLDR: Through focusing on the user flow, I was able to identify key customer pain points. I was then able to design, develop, and colloborate with team members to improve these areas.**
 
@@ -45,7 +51,25 @@ While some of these I could answer by looking at more graphs, to feel confident 
 ### Viewing Previous Designs
 
 Now that I knew what the main flow was, I had to familiarize myself with the respective pages. 
-
+ 
+<Tabs items={['Homepage', 'Detail Page','Product Page', 'Cart Page']}>
+  <Tab>
+    ![Homepage](/cr/homepage.jpg "Old Cart Page")
+    > Old Homepage
+  </Tab>
+  <Tab>
+    ![detail](/cr/detail_old.png "Old Detail Page")
+    > Old Detail Page
+    </Tab>
+  <Tab>
+    ![dreambox](/cr/dreambox_old.png "Old dreambox Page")
+     > Old Product Page
+  </Tab>
+  <Tab>
+    ![Cart Page](/cr/cart_old.jpg "Old Cart Page")
+    > Old Cart Page
+  </Tab>
+</Tabs>
 
 I made note of any weird functionality such as
 * Homepage CTA links to detail page instead of product page
@@ -86,6 +110,32 @@ Once I had my list of site features, I began to look at how (and if) users were 
 ### Building Out Requirement List
 
 Armed with the knowledge of where the customers were going, what they were doing, and what obstacles were in their way, I started creating a list of requirements that would be accomplished in the upcoming design.
+<Tabs items={['Homepage', 'Detail Page','Product Page', 'Cart Page']}>
+  <Tab>
+    - Decrease Scroll Depth
+    - Introduce More Products
+    - Remove Clutter
+    - More 'Sales-y' (Cialdini's 6 principles)
+    - Give customers  
+  </Tab>
+  <Tab>
+    - Optional step in the flow
+    - Clear 'Shop Product' button
+    - More Valuable information on Product
+    </Tab>
+  <Tab>
+    - Decrease Loading time
+    - Decrease Scroll Depth
+    - Progressive Disclosure to not overwhelm customers with information
+    - Clearer price messaging
+  </Tab>
+  <Tab>
+    - Establish a more clear visual hierarchy
+    - Remove unused page features (financing / product count stepper)
+    - Hide $0 savings if not applicable
+    - Shorter page length & checkout button at the bottom (for people that skim)
+  </Tab>
+</Tabs>
 
 ***
 
@@ -108,6 +158,12 @@ Normally, before spending too much time on design I would try to meet with the d
 
 To get a general idea of layout, wireframes were created. I didn't want to spend too much time on them though, since I could make final tweaks in development.
 
+
+<Callout emoji="ℹ️"> 
+  I designed 3 out of the 4 redesign projects. For the Homepage redesign I took on more of a PM role than one of a designer.
+</Callout>
+![Cart](/cr/cart_mobile.png "title")
+> Mobile Cart Page Wireframe
 
 ### Mockups
 
@@ -157,6 +213,10 @@ I leveraged Photoshop scripts to automate re-exporting the images (which saved m
 ***
 ### Product Page
 
+
+<Callout emoji="ℹ️" > 
+  Visually, the product page stayed the same, but it no longer loads slow! View it here www.createroom.com/products/dreambox
+</Callout>
 
 ## AB Testing
 
