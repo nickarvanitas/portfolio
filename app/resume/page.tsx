@@ -16,11 +16,11 @@ export default function ResumePage() {
           <Container width={3}>
             <Resume.Body >{<><span className="text-gray-900">Nick Arvanitas</span><br /><span className='text-gray-800'>nick.arvanitas@gmail.com</span></>}</Resume.Body>
           </Container>
-          <Container width={1} height={4} bgColor={""} border={false}>
+          <Container width={1} bgColor={""} border={false}>
             <Resume.Title>Experience</Resume.Title>
           </Container>
           <Container width={3}>
-            <Resume.Body subtitle={'Nov 2022 - Current'} title={'UX Designer / Front End Developer'} job={'SimpliScreen'}>• Currently designing and helping develop a SaaS App with Angular<br />• Designed and developed marketing sites hosted on Shopify</Resume.Body>
+            <Resume.Body subtitle={'Nov 2022 - Current'} title={'UX Designer / Front End Developer'} job={'Freelance'}>• Currently designing and helping develop a SaaS App with Angular<br />• Designed and developed marketing sites hosted on Shopify</Resume.Body>
             <Resume.Body subtitle={'Oct 2020 - Dec 2022'} title={'UX Designer'} job={'CreateRoom'}>• Refactored a multi-million dollar startup's e-commerce website to improve conversion.<br />
               • Created wireframes, mockups, and prototypes for upcoming features.<br />
               • Conducted research via surveys, heat maps, and customer sessions.<br />
@@ -46,14 +46,6 @@ export default function ResumePage() {
           </Container>
           <Container width={3}>
             <Resume.Body subtitle={'2015 - 2020'} title={'Utah Valley University'}>Bachelors in Web Design & Development</Resume.Body>
-          </Container>
-          <Container width={1}>
-            <Resume.Title>References</Resume.Title>
-          </Container>
-          <Container width={3}>
-            <Resume.Body>Zack Porter - Lead Front End Developer<br />385 722 0752</Resume.Body>
-            <Resume.Body>Karen White - Lead UX Designer <br />801 636 5952</Resume.Body>
-            <Resume.Body>Keith Hubert - VP of Customer & Sales <br />801 850 3544</Resume.Body>
           </Container>
         </Wrapper>
       </Section.Narrow>

@@ -1,4 +1,4 @@
-export default function Footer(): React.ReactNode {
+export default function Footer(): JSX.Element {
   return (
     <footer className="bg-zinc-950">
       <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function Footer(): React.ReactNode {
   )
 }
 
-Footer.Item = ({ children, gridWidth }): React.ReactNode => {
+export function Item({ children, gridWidth }: { children: React.ReactNode, gridWidth: number }): JSX.Element {
   return (
     <div className={`${!gridWidth || gridWidth == 1 ? 'md:col-span-1' : `md:col-span-${gridWidth}`}`}>
       {children}
@@ -52,7 +52,7 @@ Footer.Item = ({ children, gridWidth }): React.ReactNode => {
   )
 }
 
-Footer.Menu = ({ children, title }): React.ReactNode => {
+export function Menu({ children, title }: { children: React.ReactNode, title: string }): JSX.Element {
   return (
     <div className="flex flex-col text-white">
       {title}
@@ -60,3 +60,6 @@ Footer.Menu = ({ children, title }): React.ReactNode => {
     </div>
   )
 }
+
+Footer.Item = Item
+Footer.Menu = Menu

@@ -1,3 +1,13 @@
+
+import Article from '@/components/ui/article'
+import { Tab, Tabs } from '@/components/ui/tabs'
+import Callout from '@/components/ui/Callout'
+import Wrapper from '@/components/ui/Wrapper'
+import Container from '@/components/ui/Container'
+import ColorBlock from '@/components/ui/ColorBlock'
+
+<Article>
+
 # MTC Tools
 **TLDR: I was the first designer to work on the native version of our web app. This consisted of designing a mobile search, menu, profile experience, and dashboard.**
 
@@ -69,8 +79,17 @@ To accomplish this...
 
 - Labels, Functionality, & Navigation links were listed out
 - Items marked in red distuinguished discrepencies between the 3 versions
-- Functionality was added or removed as a result
+- Functionality was added or removed as a result of this analysis
 
+## Design
+### Colors
+
+<Wrapper gridWidth={4}>
+  <Container width={1} bgColor={'#F8F9FA'}><ColorBlock color={'black'}>#F8F9FA</ColorBlock></Container>
+  <Container width={1} bgColor={'#F2813A'}><ColorBlock color={'black'}>#F2813A</ColorBlock></Container>
+  <Container width={1} bgColor={'#A7A8AB'}><ColorBlock color={'black'}>#A7A8AB</ColorBlock></Container>
+  <Container width={1} bgColor={'#4D6594'}><ColorBlock color={'white'}>#4D6594</ColorBlock></Container>
+</Wrapper>
 
 ### Typography
 
@@ -129,3 +148,5 @@ Although no pictures are shown, at the end of this project I was able to meet wi
 ### Documenting Changes
 After everything was launched and finalized, I spent time to update our style guide with new components. Although I did it begrudgingly, **I've learned that an 'up to date' Style Guide allows designers to not be a bottle neck in flows**, and allows other team members to work independantly while not compromising design.
 
+
+</Article>

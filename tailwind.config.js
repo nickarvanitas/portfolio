@@ -13,7 +13,19 @@ module.exports = {
     {
       pattern: /bg-(mtc|housemate|simpliscreen|createroom|gallery)/,
       variants: ['group-hover'],
-    }
+    },
+    {
+      pattern: /col-span./,
+      variants: ['lg', 'md']
+    },
+    {
+      pattern: /row-span./,
+      variants: ['lg', 'md']
+    },
+    {
+      pattern: /grid-cols-(1|2|3|4|5)/,
+      variants: ['md']
+    },
   ],
   theme: {
     extend: {

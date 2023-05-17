@@ -13,6 +13,12 @@ export default function Navbar() {
   const navigation = mainMenu
   const pathname = usePathname();
 
+  const activeClasses = (isActive: boolean): string => {
+    return isActive
+      ? 'text-gray-800 dark:text-slate-50 font-normal'
+      : 'text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-50 transition-default';
+  }
+
   return (
     <Disclosure as="nav" className="dark:bg-zinc-800 z-20  top-0 border-b-2 border-solid  dark:border-zinc-600 relative">
       {({ open }) => (
@@ -39,7 +45,7 @@ export default function Navbar() {
                           return (
                             <Menu as="div" className="relative ml-3" key={item.name}>
                               <Menu.Button className={cn(
-                                isActive ? 'text-gray-800' : 'text-gray-500 hover:text-gray-800',
+                                activeClasses(isActive),
                                 'px-3 py-2 flex gap-x-1 items-center text-sm  dark:text-gray-300 dark:hover:text-gray-50 transition-default'
                               )}>{item.name}<div className='w-3 h-auto'><svg fill='currentColor' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 429.3l22.6-22.6 192-192L493.3 192 448 146.7l-22.6 22.6L256 338.7 86.6 169.4 64 146.7 18.7 192l22.6 22.6 192 192L256 429.3z" /></svg></div></Menu.Button>
                               <Transition
@@ -77,8 +83,8 @@ export default function Navbar() {
                               key={item.name}
                               href={item.href}
                               className={cn(
-                                isActive ? 'text-gray-800' : 'text-gray-500 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-50 transition-default',
-                                'px-3 py-2 text-sm font-medium'
+                                activeClasses(isActive),
+                                'px-3 py-2 text-sm font-light'
                               )}
                               aria-current={isActive ? 'page' : undefined}
                             >
@@ -129,8 +135,8 @@ export default function Navbar() {
                     as="a"
                     href={item.href}
                     className={cn(
-                      isActive ? 'text-gray-800' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'block rounded-md px-3 py-2 text-base font-medium'
+                      activeClasses(isActive),
+                      'block rounded-md px-3 py-2 font-light'
                     )}
                     aria-current={isActive ? 'page' : undefined}
                   >

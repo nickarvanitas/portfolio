@@ -1,3 +1,4 @@
+import React from "react";
 
 export default function Resume() {
   return (
@@ -5,13 +6,13 @@ export default function Resume() {
   )
 }
 
-Resume.Title = ({ children }): React.ReactNode => {
+export function Title({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <div className="md:text-right text-gray-700 text-xl md:text-2xl lg:text-3xl font-bold">{children}</div>
   )
 }
 
-Resume.Body = ({ children, subtitle, title, job }): React.ReactNode => {
+export function Body({ children, subtitle, title, job }: { children: React.ReactNode, subtitle: string, title: string, job: string }): JSX.Element {
   return (
     <div className="pb-4 md:pb-6 lg:pb-8">
       <div className="text-lg md:text-xl text-gray-500 font-light">{subtitle}</div>
@@ -23,3 +24,6 @@ Resume.Body = ({ children, subtitle, title, job }): React.ReactNode => {
     </div>
   )
 }
+
+Resume.Title = Title;
+Resume.Body = Body;
