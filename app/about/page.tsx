@@ -10,7 +10,7 @@ export default function page() {
             <div className='lg:max-w-md col-span-1 p-4 md:p-6 lg:p-12'>
               <Image src="/nick/jeju.jpg" className='w-full h-auto aspect-[3/2] object-cover grayscale relative' width={300} height={200} alt='me' />
               <div className='relative -mt-8 z-[1]'>
-                <div className='text-6xl font-light font-serif dark:text-white inline-block bg-red-500 leading-snug px-2 mb-2'>Hey! I'm Nick</div>
+                <div className='text-6xl font-light font-serif dark:text-white inline-block bg-red-500 leading-snug px-2 mb-2'>Hey! I&apos;m Nick</div>
                 <div className='text-3xl font-light leading-snug dark:text-zinc-50'>An interactive designer & developer who has worked in both startup and large SaaS environments.</div>
               </div>
             </div>
@@ -35,7 +35,7 @@ export default function page() {
             <div className='row-span-1 border-b-2 border-zinc-500'>
               <div className='p-4 md:p-6 lg:p-12'>
                 <div className='text-lg dark:text-red-500 uppercase tracking-wider font-medium pb-2'>In Life</div>
-                <div className='text-2xl font-light dark:text-neutral-300'>I'm a passionate world traveler (15 countries) who moved back to the USA after living abroad in Thailand for the past year. I believe "diversity is the spice of life", so I try to seek out new experiences wherever I can. My wife and I are excited to have our first child this June.</div>
+                <div className='text-2xl font-light dark:text-neutral-300'>I&apos;m a passionate world traveler (15 countries) who moved back to the USA after living abroad in Thailand for the past year. I believe &rdquo; diversity is the spice of life&rdquo; , so I try to seek out new experiences wherever I can. My wife and I are excited to have our first child this June.</div>
               </div>
             </div>
           </div>
