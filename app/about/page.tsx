@@ -26,7 +26,7 @@ export default function page() {
             <div className='row-span-1 border-b border-zinc-800'>
               <div className='p-4 md:p-6 lg:p-12'>
                 <div className='text-lg dark:text-red-500 uppercase tracking-wider font-medium pb-2'>At Work</div>
-                <div className='text-2xl font-light dark:text-neutral-300'>Currently, I work with a couple amazing clients doing freelance work. Lately I've been trying to incorporate more animation & 3D into my work. Although remote work has been great, I&apos;m currently pursuing a hybrid role for more human interaction</div>
+                <div className='text-2xl font-light dark:text-neutral-300'>Currently, I work with a couple amazing clients doing freelance work. Lately I&lsquo;ve been trying to incorporate more animation & 3D into my work. Although remote work has been great, I&apos;m currently pursuing a hybrid role for more human interaction</div>
               </div>
             </div>
             <div className='row-span-1 bg-zinc-950 border-b border-zinc-800 py-4'>

@@ -21,7 +21,7 @@ export default function ResumePage() {
           </Container>
           <Container width={3}>
             <Resume.Body subtitle={'Nov 2022 - Current'} title={'UX Designer / Front End Developer'} job={'Freelance'}>• Currently designing and helping develop a SaaS App with Angular<br />• Designed and developed marketing sites hosted on Shopify</Resume.Body>
-            <Resume.Body subtitle={'Oct 2020 - Dec 2022'} title={'UX Designer'} job={'CreateRoom'}>• Refactored a multi-million dollar startup's e-commerce website to improve conversion.<br />
+            <Resume.Body subtitle={'Oct 2020 - Dec 2022'} title={'UX Designer'} job={'CreateRoom'}>• Refactored a multi-million dollar startup&lsquo;s e-commerce website to improve conversion.<br />
               • Created wireframes, mockups, and prototypes for upcoming features.<br />
               • Conducted research via surveys, heat maps, and customer sessions.<br />
               • Worked with Google Analytics to analyze data, identify customer trends, and present data to shareholders.</Resume.Body>
