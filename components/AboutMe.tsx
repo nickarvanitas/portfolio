@@ -12,7 +12,7 @@ export default function AboutMe() {
               <div className="!leading-tighter font-serif text-white text-6xl lg:text-8xl lg:max-w-screen-md xl:max-w-screen-lg">Passion for Interaction Design</div>
             </div>
             <div className='flex gap-x-4'>
-              <Link href='/projects' className='text-lg px-6 py-3 hover:bg-red-400 bg-red-800 text-white rounded-full min-w-[10rem] text-center'>About Me</Link>
+              <Link href='/about' className='text-lg px-6 py-3 hover:bg-red-400 bg-red-800 text-white rounded-full min-w-[10rem] text-center'>About Me</Link>
             </div>
           </div>
           <div className="row-start-1 lg:col-start-2 col-span-1 relative row-span-1">

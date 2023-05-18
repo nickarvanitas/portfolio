@@ -35,7 +35,7 @@ export default function page() {
             <div className='row-span-1 border-b-2 border-zinc-500'>
               <div className='p-4 md:p-6 lg:p-12'>
                 <div className='text-lg dark:text-red-500 uppercase tracking-wider font-medium pb-2'>In Life</div>
-                <div className='text-2xl font-light dark:text-neutral-300'>My wife and I recently moved back to the USA after living abroad in Thailand for the past year. While living there, we traveled 5 different countries and enjoyed food from all over the world. We're now beginning our next journey and expecting our first child in June.</div>
+                <div className='text-2xl font-light dark:text-neutral-300'>I'm a passionate world traveler (15 countries) who moved back to the USA after living abroad in Thailand for the past year. I believe "diversity is the spice of life", so I try to seek out new experiences wherever I can. My wife and I are excited to have our first child this June.</div>
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ export default function Hero() {
             <div className='text-2xl md:text-3xl font-light lg:text-2xl text-zinc-400'>UX/UI Designer + Front End Developer</div>
           </div>
           <div className='flex gap-x-4'>
-            <Link href='/projects' className='text-lg px-6 py-3 hover:bg-red-400 bg-red-800 text-white rounded-full min-w-[10rem] text-center'>View Work</Link>
+            <Link href='/projects/createroom' className='text-lg px-6 py-3 hover:bg-red-400 bg-red-800 text-white rounded-full min-w-[10rem] text-center'>View Work</Link>
             <Link href='/about' className='text-lg px-6 py-3 bg-white text-black rounded-full min-w-[10rem] text-center'>About Me</Link>
           </div>
         </div>

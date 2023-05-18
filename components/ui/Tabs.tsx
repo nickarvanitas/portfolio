@@ -41,7 +41,7 @@ export function Tabs({
       onChange={onChange}
     >
       <div className="overflow-x-auto overflow-y-hidden overscroll-x-contain">
-        <HeadlessTab.List className="mt-4 flex w-max min-w-full border-b border-gray-200 pb-px dark:border-neutral-800">
+        <HeadlessTab.List className="mt-4 flex w-max min-w-full border-b border-gray-200 pb-px">
           {items.map((item, index) => {
             const disabled = !!(
               item &&
@@ -56,13 +56,13 @@ export function Tabs({
                 disabled={disabled}
                 className={({ selected }) =>
                   cn(
-                    'mr-2 rounded-t p-2 font-medium leading-5 transition-colors',
+                    'mr-2 rounded-t p-2 leading-5 transition-colors',
                     '-mb-0.5 select-none border-b-2',
                     selected
-                      ? 'border-primary-500 text-primary-600'
-                      : 'border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white',
+                      ? 'border-red-600 text-red-700 font-medium bg-red-100'
+                      : 'border-transparent text-gray-600 hover:border-gray-200 hover:text-black bg-zinc-50 font-light',
                     disabled &&
-                    'pointer-events-none text-gray-400 dark:text-neutral-600'
+                    'pointer-events-none text-gray-400'
                   )
                 }
               >

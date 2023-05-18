@@ -18,7 +18,7 @@ const classes: Record<CalloutType, string> = {
     'border-red-200 bg-red-100 text-red-900 dark:border-red-200/30 dark:bg-red-900/30 dark:text-red-200'
   ),
   info: cn(
-    'border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200'
+    'border-blue-200 bg-blue-100 text-blue-900 '
   ),
   warning: cn(
     'border-yellow-100 bg-yellow-50 text-yellow-900 dark:border-yellow-200/30 dark:bg-yellow-700/30 dark:text-yellow-200'
@@ -39,20 +39,16 @@ export default function Callout({
   return (
     <div
       className={cn(
-        'overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4',
-        'contrast-more:border-current contrast-more:dark:border-current',
+        'overflow-x-auto mt-6 flex rounded-lg border py-4 px-4 not-prose [&_a]:text-[#3b82f6] [&_a]:underline gap-x-4 ',
         classes[type]
       )}
     >
       <div
         className="select-none text-xl ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"
-        style={{
-          fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-        }}
       >
         {emoji}
       </div>
-      <div className="w-full min-w-0 leading-7">{children}</div>
+      <div className="w-full min-w-0 leading-6">{children}</div>
     </div>
   )
 }
