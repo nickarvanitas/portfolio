@@ -205,7 +205,7 @@ export default function Contact() {
   )
 }
 
-Contact.Form = () => {
+export function Form() {
   return (
     <div className="col-span-1">
       <form action="/api/form" method="post">
@@ -219,7 +219,7 @@ Contact.Form = () => {
   )
 }
 
-Contact.Text = () => {
+export function Text() {
   return (
     <div className="mx-auto flex items-start flex-col justify-center">
       <div className="max-w-sm ">
@@ -227,10 +227,13 @@ Contact.Text = () => {
           Lets talk!
         </h1>
         <p className="text-lg text-gray-700 font-light">
-          Fill in the form and I'll get back to you as soon as I can.
+          Fill in the form and I&lsquo;ll get back to you as soon as I can.
         </p>
       </div>
     </div>
   )
 }
+
+Contact.Form = Form
+Contact.Text = Text
 

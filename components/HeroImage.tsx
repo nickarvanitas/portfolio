@@ -34,6 +34,8 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 900], [0, 800]);
   const y2 = useTransform(scrollY, [0, 400], [0, 600]);
+  const scale = useTransform(scrollY, [0, 300], [1, .9]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
     <div>
@@ -43,7 +45,7 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
             <div className={`h-screen relative ${project.background} -mt-16`} key={project.slug}>
               <div className="absolute bottom-1/4 translate-y-1/4 inset-x-0 flex justify-center items-center z-[5]">
                 <motion.div
-                  style={{ y: y1, scale: useTransform(scrollY, [0, 300], [1, .9]) }}
+                  style={{ y: y1, scale: scale }}
                   transition={easeInOut}
                   className="w-1/2"
                 >
@@ -64,7 +66,7 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
               </div>
               <div className="absolute top-24  translate-x-1/2 right-1/2  z-[5] flex items-center ">
                 <motion.div
-                  style={{ y: y2, opacity: useTransform(scrollY, [0, 400], [1, 0]) }}
+                  style={{ y: y2, opacity: opacity }}
                   transition={easeInOut}
                 >
                   <div className={`font-serif tracking-tighter text-9xl ${project.color}`}>
