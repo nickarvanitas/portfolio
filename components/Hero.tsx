@@ -16,7 +16,7 @@ export default function Hero() {
       <div className='px-4 md:px-6 lg:px-12 flex items-center dark:bg-zinc-900  row-span-1 lg:col-span-1 lg:col-start-1 lg:row-start-1'>
         <div className='flex justify-center flex-col h-full z-[5] lg:mx-auto'>
           <div className='mb-6'>
-            <div className="before:text-red-600 before:mr-1 before:content-['———'] text-xl text-zinc-300">Hello. I'm</div>
+            <div className="before:text-red-600 before:mr-1 before:content-['———'] text-xl text-zinc-300">Hello. I&apos;m</div>
             <div className='text-white font-serif text-8xl lg:text-9xl'>Nick Arvanitas</div>
             <div className='text-2xl md:text-3xl font-light lg:text-2xl text-zinc-400'>UX/UI Designer + Front End Developer</div>
           </div>

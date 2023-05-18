@@ -22,7 +22,7 @@ export default function Section({ children, className, borderB, topOffset, topOf
     )
 }
 
-Section.Raw = ({ children, className, borderB, topOffset, topOffsetColor, botOffset, botOffsetColor }: Section) => {
+export function Raw({ children, className, borderB, topOffset, topOffsetColor, botOffset, botOffsetColor }: Section) {
     return (
         <section className={`relative ${borderB ? 'border-b border-solid border-gray-200' : null} ${className}`}>
             <div className="flex">
@@ -36,7 +36,7 @@ Section.Raw = ({ children, className, borderB, topOffset, topOffsetColor, botOff
     )
 }
 
-Section.Narrow = ({ children, className, borderB, topOffset, topOffsetColor, botOffset, botOffsetColor }: Section) => {
+export function Narrow({ children, className, borderB, topOffset, topOffsetColor, botOffset, botOffsetColor }: Section) {
     return (
         <section className={`relative ${borderB ? 'border-b border-solid border-gray-200' : null} ${className} py-4 md:py-8 first-of-type:pt-8 first-of-type:md:pt-12 lg:py-16 first-of-type:lg:pt-24`}>
             <div className="mx-auto flex max-w-[60rem]">
@@ -49,3 +49,6 @@ Section.Narrow = ({ children, className, borderB, topOffset, topOffsetColor, bot
         </section>
     )
 }
+
+Section.Narrow = Narrow
+Section.Raw = Raw
