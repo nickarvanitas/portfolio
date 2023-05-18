@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter, Spectral } from 'next/font/google'
 import { ThemeProvider } from "@/components/ThemeProvider"
+import Navbar from '@/components/Navbar'
 import PageTransition from '@/components/PageTransition'
 import Footer from '@/components/Footer'
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className='overflow-x-hidden'>
         <ThemeProvider attribute="class" forcedTheme='dark'>
           <PageTransition>
+            <Navbar />
             {children}
             <Footer />
           </PageTransition>
