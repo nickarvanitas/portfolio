@@ -25,6 +25,9 @@ dependencies:
   '@react-three/fiber':
     specifier: ^8.13.0
     version: 8.13.0(react-dom@18.2.0)(react@18.2.0)(three@0.152.2)
+  '@types/mdx':
+    specifier: ^2.0.5
+    version: 2.0.5
   '@types/node':
     specifier: 18.16.3
     version: 18.16.3
@@ -37,6 +40,9 @@ dependencies:
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.23)
+  babel-plugin-import-glob-array:
+    specifier: ^0.2.0
+    version: 0.2.0
   class-variance-authority:
     specifier: ^0.6.0
     version: 0.6.0(typescript@5.0.4)
@@ -1247,6 +1253,13 @@ packages:
     resolution: {integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==}
     dependencies:
       deep-equal: 2.2.1
+    dev: false
+
+  /babel-plugin-import-glob-array@0.2.0:
+    resolution: {integrity: sha512-z7JhHOQ2hq4MBaNL9aAtDsilS12V01QNbhlZzPBIAkTymXmJhvkZVQIDvb6CJrfFN7wy9ScOTpwhv9RsvGSEWg==}
+    dependencies:
+      glob: 7.2.3
+      is-glob: 4.0.3
     dev: false
 
   /bail@2.0.2:
