@@ -9,7 +9,7 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
       title: "Create Room",
       slug: "createroom",
       background: "bg-createroom",
-      color: "text-white",
+      color: "text-[#00142f]",
     },
     {
       title: "UI Gallery",
@@ -21,7 +21,7 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
       title: "Housemate",
       slug: "housemate",
       background: "bg-housemate",
-      color: "text-white",
+      color: "text-[#293644]",
     },
     {
       title: "MTC Tools",
@@ -64,7 +64,7 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
                   </div>
                 </motion.div>
               </div>
-              <div className="absolute top-24  translate-x-1/2 right-1/2  z-[5] flex items-center ">
+              <div className="absolute top-36  translate-x-1/2 right-1/2  z-[5] flex items-center ">
                 <motion.div
                   style={{ y: y2, opacity: opacity }}
                   transition={easeInOut}

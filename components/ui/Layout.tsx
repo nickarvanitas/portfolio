@@ -7,9 +7,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
-export function Full({ children }: { children: React.ReactNode }) {
+export function Full({ children, className }: { children: React.ReactNode, className: string }) {
   return (
-    <div className="w-full overflow-x-hidden break-words min-h-[calc(100vh-66px)] pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]">{children}</div>
+    <div className={`${className} w-full overflow-x-hidden break-words min-h-[calc(100vh-66px)] pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)]`}>{children}</div>
   )
 }
 

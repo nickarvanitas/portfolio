@@ -90,12 +90,12 @@ export default function Projects() {
   return (
     <div ref={containerRef}>
       <div className="scroll-container sticky inset-0 will-change-transform bg-zinc-800 border-b-2 border-zinc-500 z-[5]">
-        <div className='flex h-[15vh]  items-center xl:pl-40 lg:pl-30 pl-20 space-x-20 bg-zinc-900 border-b-2 border-zinc-600'>
-          <div className='text-zinc-300 w-[40vw] max-w-lg text-xl border-r border-zinc-600'>
+        <div className='flex p-4 lg:px-0 flex-col lg:flex-row lg:h-[15vh]  lg:items-center xl:pl-40 lg:pl-30 lg:space-x-20 bg-zinc-900 border-b-2 border-zinc-600'>
+          <div className='text-zinc-300 lg:w-[40vw] max-w-lg text-xl lg:border-r border-zinc-600 mb-2'>
             <div>Case Studies</div>
             <div>01 –– 04</div>
           </div>
-          <div className='text-zinc-400 w-[40vw] max-w-lg text-xl'>
+          <div className='text-zinc-400 lg:w-[40vw] max-w-lg text-xl'>
             <div>Some of the projects I’ve been a part of. Feel free to reach out to see more of my works.</div>
           </div>
         </div>
@@ -103,11 +103,11 @@ export default function Projects() {
         <motion.section
           ref={scrollRef}
           style={isSmall ? { x: 0 } : { x: transform }}
-          className="relative h-[calc(85vh+4px)] w-max flex items-center xl:px-40 lg:px-30 px-20"
+          className="relative flex items-center lg:h-[calc(85vh+4px)]"
         >
-          <div className="relative flex gap-x-20 lg:gap-x-40">
+          <div className="relative block py-32 px-8 lg:my-0 whitespace-nowrap overflow-auto lg:overflow-visible lg:whitespace-normal lg:flex lg:gap-x-40 xl:px-40 lg:px-30" >
             {projects.map((project, i) => (
-              <a href={project.href} className="md:w-[80vw] lg:w-[40vw] 2xl:w-[30vw] aspect-[3/2] lg:aspect-square group border-zinc-500 border-2 relative overflow-hidden px-7 py-9 bg-zinc-950 shadow-2xl" key={project.href}>
+              <a href={project.href} className="inline-block whitespace-normal mr-8 last-of-type:mr-0 lg:block w-[calc(80vw)] md:w-[80vw] lg:w-[40vw] 2xl:w-[30vw] aspect-square md:aspect-[3/2] lg:aspect-square group border-zinc-500 border-2 relative overflow-hidden px-7 py-9 bg-zinc-950 shadow-2xl" key={project.href}>
                 <div className='flex flex-col '>
                   <div className='!leading-tighter text-6xl lg:text-5xl xl:text-7xl text-white font-bold  pb-4'>{project.title}</div>
                   <div className=' text-zinc-400 font-light text-2xl md:text-xl lg:text-2xl'>{project.subtitle}</div>
@@ -123,7 +123,7 @@ export default function Projects() {
           </div>
         </motion.section>
       </div>
-      <div ref={ghostRef} style={isSmall ? { height: 0 } : { height: scrollRange }} className="ghost w-screen" />
+      <div ref={ghostRef} style={isSmall ? { height: 0 } : { height: scrollRange }} className="ghost w-screen hidden lg:block" />
     </div >
   );
 };

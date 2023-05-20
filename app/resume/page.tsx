@@ -7,7 +7,7 @@ import Container from "@/components/ui/Container";
 export default function ResumePage() {
   return (
 
-    <Layout.Full>
+    <Layout.Full className={'dark:bg-zinc-50'}>
       <Section.Narrow>
         <Wrapper gridWidth={4}>
           <Container width={1}>
