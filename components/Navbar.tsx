@@ -28,7 +28,7 @@ export default function Navbar() {
               <div className="flex items-center">
                 <Link href="/">
                   <img
-                    className="hidden h-12 w-auto sm:block dark:invert-[1]"
+                    className="h-12 w-auto dark:invert-[1]"
                     src="/logo_light.svg"
                     alt="Your Company"
                   />
