@@ -11,6 +11,9 @@ export default function Home() {
   return (
     <main>
       <Projects />
+      <AboutMe />
+      <Reviews />
+      <ContactSection />
     </main >
   )
 }
