@@ -1,5 +1,5 @@
-import React, { useRef, useLayoutEffect, useState } from 'react'
-import { Float, GradientTexture, useGLTF, useScroll } from '@react-three/drei'
+import React, { useRef, useState } from 'react'
+import { Float, GradientTexture, useScroll } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import gsap from 'gsap'
 

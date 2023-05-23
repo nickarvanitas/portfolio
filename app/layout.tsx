@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/ThemeProvider"
 import Navbar from '@/components/Navbar'
 import PageTransition from '@/components/PageTransition'
 import Footer from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 export const metadata = {
@@ -34,11 +36,11 @@ export default function RootLayout({
       </head>
       <body className='overflow-x-hidden'>
         <ThemeProvider attribute="class" forcedTheme='dark'>
-          <PageTransition>
-            <Navbar />
-            {children}
-            <Footer />
-          </PageTransition>
+          <Analytics />
+
+          <Navbar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
