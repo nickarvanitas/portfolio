@@ -6,7 +6,6 @@ interface menu {
   type: "menu" | "page" | "icon";
   items?: Array<subMenu>;
   href?: string;
-  icon?: IconProp
 }
 
 interface subMenu {
