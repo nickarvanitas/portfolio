@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Float, GradientTexture, useScroll } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import gsap from 'gsap'
 
 export default function HeroExperienceObject(props) {
   const logo = useRef()
@@ -10,7 +9,6 @@ export default function HeroExperienceObject(props) {
   const [rotation, setRotation] = useState(0)
 
   useFrame((state, delta) => {
-    // tl.current.seek(scroll.offset * tl.current.duration())
     setRotation(rotation + delta)
   })
 
