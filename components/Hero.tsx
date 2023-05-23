@@ -26,7 +26,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <HeroExperience className='col-span-1 row-span-1 lg:col-start-2 lg:row-start-1' />
       <div className='relative z-[5] row-start-2 col-span-1 overflow-x-hidden lg:col-span-2'>
         <div className='flex scrollbar-hide space-x-2 bg-zinc-900 py-2 lg:py-6 border-t-2 border-b-2 border-zinc-600'>
           <div className='flex gap-x-12 pl-12 animate-cycleList'>
