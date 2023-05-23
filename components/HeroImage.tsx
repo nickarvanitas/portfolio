@@ -42,12 +42,12 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
       {projects.map((project, index) => {
         if (project.slug === slug) {
           return (
-            <div className={`h-screen relative ${project.background} -mt-16`} key={project.slug}>
+            <div className={`lg:h-screen h-[80vh] relative ${project.background} -mt-16`} key={project.slug}>
               <div className="absolute bottom-1/4 translate-y-1/4 inset-x-0 flex justify-center items-center z-[5]">
                 <motion.div
                   style={{ y: y1, scale: scale }}
                   transition={easeInOut}
-                  className="w-1/2"
+                  className=" w-3/4 lg:w-1/2"
                 >
                   <Image src={`/hero/${slug}.jpg`} alt="Hero" width={1600} height={1080} className="w-full h-auto" />
                 </motion.div>
@@ -69,7 +69,7 @@ export default function HeroImage({ slug, handleClick }: { slug: string, handleC
                   style={{ y: y2, opacity: opacity }}
                   transition={easeInOut}
                 >
-                  <div className={`font-serif tracking-tighter text-9xl ${project.color}`}>
+                  <div className={`text-center font-serif tracking-tighter text-7xl lg:text-9xl ${project.color}`}>
                     {project.title}
                   </div>
                 </motion.div>

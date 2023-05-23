@@ -92,8 +92,8 @@ export default function Contact() {
 
   return (
     <div className="grid lg:grid-cols-2 bg-zinc-50">
-      <div className="col-span-1 bg-zinc-700">
-        <div className="flex items-center h-full justify-center">
+      <div className="col-span-1 bg-zinc-800">
+        <div className="px-4 lg:px-0 flex items-center h-full justify-center">
           <div>
             <h1 className="text-4xl font-bold text-zinc-200 pb-3">
               Lets talk!
@@ -105,7 +105,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="col-span-1  bg-zinc-100 lg:bg-zinc-700 flex items-center px-0 md:px-4 lg:px-8" >
+      <div className="col-span-1  bg-zinc-100 lg:bg-zinc-800 flex items-center px-0 md:px-4 lg:px-8" >
         <div className="w-full  p-4 lg:py-12 lg:px-8 bg-zinc-100">
 
           <h1 className="text-2xl font-bold text-zinc-800">

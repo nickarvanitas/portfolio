@@ -9,7 +9,7 @@ export default function AboutMe() {
           <div className="flex flex-col justify-center col-start-1 lg:row-start-1 col-span-2 relative z-[1] row-span-1 px-4 md:px-8 lg:px-12 text-center items-center lg:text-left lg:items-start">
             <div className="pb-4">
               <div className="uppercase text-red-600 text-lg">My Story</div>
-              <div className="!leading-tighter font-serif text-white text-6xl lg:text-8xl lg:max-w-screen-md xl:max-w-screen-lg">Passion for Interaction Design</div>
+              <div className="leading-none font-serif text-white text-6xl lg:text-8xl lg:max-w-screen-md xl:max-w-screen-lg">Passion for Interaction Design</div>
             </div>
             <div className='flex gap-x-4'>
               <Link href='/about' className='text-lg px-6 py-3 hover:bg-red-400 bg-red-800 text-white rounded-full min-w-[10rem] text-center'>About Me</Link>
