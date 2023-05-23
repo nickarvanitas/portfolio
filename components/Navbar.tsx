@@ -128,21 +128,64 @@ export default function Navbar() {
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => {
                 const isActive = pathname.startsWith(item.href)
+                if (item.items) {
+                  return (
+                    <Menu as={Fragment} key={item.name}>
+                      <Menu.Button as='div' className={cn(
+                        activeClasses(isActive),
+                        'rounded-md px-3 py-2 font-light hover:cursor-pointer flex justify-between'
+                      )}>
+                        {item.name}
+                        <div className='w-4 h-auto text-white'><svg xmlns="http://www.w3.org/2000/svg" fill='currentColor' viewBox="0 0 512 512"><path d="M256 417.9l17-17L465 209l17-17L448 158.1l-17 17-175 175L81 175l-17-17L30.1 192l17 17L239 401l17 17z" /></svg>
+                        </div>
+                      </Menu.Button>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0"
+                        enterTo="transform opacity-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100"
+                        leaveTo="transform opacity-0"
+                      >
+                        <Menu.Items className="mt-2 origin-top">
+                          {item.items?.map((item) => {
+                            const isActive = pathname.startsWith(item.href);
+                            return (
+                              <Menu.Item key={item.href}>
+                                {({ active }) => (
+                                  <a
+                                    href={item.href}
+                                    className={'block px-8 py-2 text-gray-700 dark:text-zinc-400'}
+                                  >
+                                    {item.name}
+                                  </a>
+                                )}
+                              </Menu.Item>
+                            )
+                          })}
+                        </Menu.Items>
+                      </Transition>
 
-                return (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={cn(
-                      activeClasses(isActive),
-                      'block rounded-md px-3 py-2 font-light'
-                    )}
-                    aria-current={isActive ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                )
+
+                    </Menu>
+                  )
+                } else {
+                  return (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={cn(
+                        activeClasses(isActive),
+                        'block rounded-md px-3 py-2 font-light'
+                      )}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  )
+                }
               })}
             </div>
 
