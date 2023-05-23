@@ -7,7 +7,7 @@ import HeroExperienceObject from './HeroExperienceObject'
 
 export default function HeroExperience({ className }: { className?: string }) {
   return (
-    <div className={`border-zinc-600 border-l-2 bg-zinc-900 ${className}`}>
+    <div className={`border-zinc-600 lg:border-l-2 bg-zinc-900 ${className}`}>
       <Canvas shadows>
         <OrthographicCamera makeDefault position={[0, 2, 100]} zoom={60} />
         <ambientLight intensity={1} />
