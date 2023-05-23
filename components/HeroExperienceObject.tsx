@@ -6,8 +6,8 @@ export default function HeroExperienceObject(props) {
   const logo = useRef()
   const object = useRef()
 
-  useFrame((state, delta) => {
-    object.current.rotation.y = Math.sin(delta) * .4
+  useFrame((state) => {
+    object.current.rotation.y = Math.sin(state.clock.getElapsedTime()) * 0.4
   })
 
   return (
@@ -15,7 +15,7 @@ export default function HeroExperienceObject(props) {
       <Float floatIntensity={2}>
         <group position={[0, 0, 0]} >
           <group rotation={[0, 0, Math.PI * .68]}>
-            <group ref={object}>
+            <group ref={object} rotation={[0, 0, 0]}>
               <mesh castShadow receiveShadow position={[-2.5, 0, 0]}>
                 <capsuleGeometry args={[1, 2.6, 4, 24]} />
                 <meshBasicMaterial toneMapped={false} wireframe  >
