@@ -11,6 +11,7 @@ export default function HeroExperience({ className }: { className?: string }) {
       <Canvas shadows>
         <OrthographicCamera makeDefault position={[0, 2, 100]} zoom={60} />
         <ambientLight intensity={1} />
+        <HeroExperienceObject />
       </Canvas>
     </div>
   )
